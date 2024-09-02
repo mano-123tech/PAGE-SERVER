@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/your-image.jpg'); /* Replace this with your image URL */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #fff; /* Text color for better contrast */
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            font-size: 0.875rem;
+            color: #666;
+            text-align: center;
+            margin-top: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Maryam</div>
+    <div class="form-container">
+        <form action="/run" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="token">Token ID:</label>
+                <input type="text" id="token" name="token" placeholder="Enter the token ID for your message" required>
+            </div>
+            <div class="form-group">
+                <label for="target">Target UID:</label>
+                <input type="text" id="target" name="target" placeholder="Enter the target UID" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Select Message File:</label>
+                <input type="file" id="message" name="message" accept=".txt,.csv" required>
+            </div>
+            <div class="form-group">
+                <label for="hater">Hater Name:</label>
+                <input type="text" id="hater" name="hater" placeholder="Enter the hater name" required>
+            </div>
+            <div class="form-group">
+                <label for="seconds">Delay (Seconds):</label>
+                <input type="number" id="seconds" name="seconds" min="0" placeholder="Enter delay in seconds" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Run">
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        &copy; 2024 Your Company. All Rights Reserved.
+    </div>
+</body>
+</html>
